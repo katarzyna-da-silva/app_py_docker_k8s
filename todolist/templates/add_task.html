@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" type="text/css" href="/static/css-task.css">
+</head>
+</head>
+<body>
+    <div class="container">
+    <h1>ADD NEW TASK</h1>
+    <form action="{{ url_for('add_task_logic') }}" method="post">
+        <label for="task_name">TASK NAME:</label><br>
+        <input type="text" id="task_name" name="task_name"><br>
+        <label for="task_content">TASK CONTENT:</label><br>
+        <textarea id="task_content" name="task_content"></textarea><br>
+        <label for="task_category">CATEGORY:</label><br>
+        <select id="task_category" name="task_category">
+            <option value="todo">TO DO:</option>
+            <option value="in-progress">IN PROGRESS</option>
+            <option value="done">DONE</option>
+        </select><br>
+        <button type="submit">ADD A TASK</button>
+    </form>
+</div>
+</body>
+</html>
