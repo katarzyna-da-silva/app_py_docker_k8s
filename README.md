@@ -45,3 +45,6 @@ This command will run the container on port 5001 on your host. The -it option al
 Accessing the Application:
 
 Once the container is running, you can access the application at ***http://localhost:5001*** in your web browser.
+
+***DOCKER IMAGE :***
+***application in docker: docker pull katarzynadasilva/myapp-k8s-py:latest***
