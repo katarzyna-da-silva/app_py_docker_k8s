@@ -1,34 +1,50 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <!-- Meta tags for character set and viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>to-do list</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" type="text/css" href="/static/css.css">
 </head>
 <body>
+    <!-- Main container -->
     <div class="container">
+        <!-- Heading with user name -->
         <h1>{{ user_name }}</h1>
+        <!-- Placeholder for greeting message -->
         <div class="hello"></div>
+        <!-- Form to add a new task (not used) -->
         <form action="{{ url_for('add_task_form') }}" method="get">
         </form>
-       
+        <!-- Button to trigger adding a new task -->
         <form action="{{ url_for('add_task_form') }}" method="get">
             <button type="submit">ADD A NEW TASK</button>
         </form>
     </div>
+    <!-- Secondary container for task columns -->
     <div class="container-two">
-       
+        <!-- First column for "to do" tasks -->
         <div class="column">
+            <!-- Heading for "to do" tasks -->
             <h2>to do : </h2>
+            <!-- Container for "to do" tasks -->
             <div id="todo-tasks">
+                <!-- Loop through "to do" tasks -->
                 {% for task in tasks['todo'] %}
+                <!-- Task item -->
                 <div class="task">
+                    <!-- Task name -->
                     <h3>{{ task['name'] }}</h3>
+                    <!-- Task content -->
                     <p>{{ task['content'] }}</p>
+                    <!-- Form to mark task as in progress -->
                     <form action="{{ url_for('mark_task_in_progress', task_name=task['name']) }}" method="post">
                         <button type="submit">IN PROGRESS</button>
                     </form>
+                    <!-- Form to remove task -->
                     <form action="{{ url_for('remove_task', task_name=task['name']) }}" method="post">
                         <button type="submit">DELETE</button>
                     </form>
@@ -36,17 +52,25 @@
                 {% endfor %}
             </div>
         </div>
-
+        <!-- Second column for "in progress" tasks -->
         <div class="column">
+            <!-- Heading for "in progress" tasks -->
             <h2>in progress : </h2>
+            <!-- Container for "in progress" tasks -->
             <div id="in-progress-tasks">
+                <!-- Loop through "in progress" tasks -->
                 {% for task in tasks['in-progress'] %}
+                <!-- Task item -->
                 <div class="task">
+                    <!-- Task name -->
                     <h3>{{ task['name'] }}</h3>
+                    <!-- Task content -->
                     <p>{{ task['content'] }}</p>
+                    <!-- Form to mark task as done -->
                     <form action="{{ url_for('mark_task_done', task_name=task['name']) }}" method="post">
-                        <button type="submit">IN PROGRESS</button>
+                        <button type="submit">Done!</button>
                     </form>
+                    <!-- Form to remove task -->
                     <form action="{{ url_for('remove_task', task_name=task['name']) }}" method="post">
                         <button type="submit">DELETE</button>
                     </form>
@@ -54,14 +78,21 @@
                 {% endfor %}
             </div>
         </div>
-
+        <!-- Third column for "done" tasks -->
         <div class="column">
+            <!-- Heading for "done" tasks -->
             <h2>done : </h2>
+            <!-- Container for "done" tasks -->
             <div id="done-tasks">
+                <!-- Loop through "done" tasks -->
                 {% for task in tasks['done'] %}
+                <!-- Task item -->
                 <div class="task">
+                    <!-- Task name -->
                     <h3>{{ task['name'] }}</h3>
+                    <!-- Task content -->
                     <p>{{ task['content'] }}</p>
+                    <!-- Form to remove task -->
                     <form action="{{ url_for('remove_task', task_name=task['name']) }}" method="post">
                         <button type="submit">DELETE</button>
                     </form>

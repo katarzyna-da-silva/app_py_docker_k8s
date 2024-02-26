@@ -1,14 +1,17 @@
-# Wybierz obraz bazowy z Pythonem
+# Choose a base image with Python
 FROM python:3.10-slim
 
-# Ustawiamy katalog roboczy w kontenerze
+# Set the working directory inside the container
 WORKDIR /todolist
 
-# Skopiuj zawartość bieżącego katalogu do katalogu /todolist w kontenerze
+# Copy the contents of the current directory into the /todolist directory in the container
 COPY . /todolist
 
+# Install dependencies from requirements.txt
 RUN pip install --no-cache-dir -r /todolist/requirements.txt
 
+# Update package lists
 RUN apt-get update
-# Ustaw domyślną komendę do uruchomienia aplikacji Flask
+
+# Set the default command to run the Flask application
 CMD ["flask", "run", "--host=0.0.0.0", "--port=5001", "--no-debugger"]

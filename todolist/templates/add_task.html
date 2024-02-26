@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <!-- Character set and viewport meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
     <title>Task</title>
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" type="text/css" href="/static/css-task.css">
 </head>
 </head>
 <body>
+    <!-- Main container -->
     <div class="container">
-    <h1>ADD NEW TASK</h1>
-    <h1>{{ user_name }}</h1>
-    <form action="{{ url_for('add_task_logic') }}" method="post">
-        <label for="task_name">TASK NAME:</label><br>
-        <input type="text" id="task_name" name="task_name"><br>
-        <label for="task_content">TASK CONTENT:</label><br>
-        <textarea id="task_content" name="task_content"></textarea><br>
-        <label for="task_category">CATEGORY:</label><br>
-        <select id="task_category" name="task_category">
-            <option value="todo">TO DO:</option>
-            <option value="in-progress">IN PROGRESS</option>
-            <option value="done">DONE</option>
-        </select><br>
-        <button type="submit">ADD A TASK</button>
-    </form>
-</div>
+        <!-- Heading for adding a new task -->
+        <h1>ADD NEW TASK</h1>
+        <!-- User name -->
+        <h1>{{ user_name }}</h1>
+        <!-- Form to add a new task -->
+        <form action="{{ url_for('add_task_logic') }}" method="post">
+            <!-- Label and input field for task name -->
+            <label for="task_name">TASK NAME:</label><br>
+            <input type="text" id="task_name" name="task_name"><br>
+            <!-- Label and textarea for task content -->
+            <label for="task_content">TASK CONTENT:</label><br>
+            <textarea id="task_content" name="task_content"></textarea><br>
+            <!-- Label and dropdown for task category -->
+            <label for="task_category">CATEGORY:</label><br>
+            <select id="task_category" name="task_category">
+                <!-- Options for task categories -->
+                <option value="todo">TO DO:</option>
+                <option value="in-progress">IN PROGRESS</option>
+                <option value="done">DONE</option>
+            </select><br>
+            <!-- Button to submit the form and add a task -->
+            <button type="submit">ADD A TASK</button>
+        </form>
+    </div>
 </body>
 </html>

@@ -1,65 +1,74 @@
+/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to left, #d000ff, #00e1ff);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    font-family: Arial, sans-serif; /* Use Arial or sans-serif font */
+    background: linear-gradient(to left, #d000ff, #00e1ff); /* Gradient background */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Set height to 100% of viewport height */
 }
 
+/* Container styles */
 .container {
-    width: 50%;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Set container width */
+    padding: 20px; /* Add padding */
+    background-color: #fff; /* Set background color */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
 }
 
+/* Heading styles */
 h1 {
-    text-align: center;
-    font-size: 32px;
-    color: rgb(0, 21, 255);
+    text-align: center; /* Center align heading */
+    font-size: 32px; /* Set font size */
+    color: rgb(0, 21, 255); /* Set text color */
 }
 
+/* Form styles */
 form {
-    width: 100%;
+    width: 100%; /* Set form width */
 }
 
+/* Label styles */
 label {
-    font-weight: bold;
-    color: #d200f2;
+    font-weight: bold; /* Set font weight to bold */
+    color: #d200f2; /* Set text color */
 }
 
+/* Input, textarea, select styles */
 input[type="text"],
 textarea,
 select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding */
+    margin-top: 5px; /* Add top margin */
+    margin-bottom: 15px; /* Add bottom margin */
+    border: 1px solid #ccc; /* Set border */
+    border-radius: 3px; /* Add border radius */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
+/* Textarea specific styles */
 textarea {
-    height: 100px;
+    height: 100px; /* Set textarea height */
 }
 
+/* Button styles */
 button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4311e6;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    display: block; /* Use block display */
+    width: 100%; /* Set width to 100% */
+    padding: 10px; /* Add padding */
+    background-color: #4311e6; /* Set background color */
+    color: #fff; /* Set text color */
+    border: none; /* Remove border */
+    border-radius: 3px; /* Add border radius */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: background-color 0.3s; /* Add transition effect */
 }
 
+/* Button hover styles */
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* Change background color on hover */
 }

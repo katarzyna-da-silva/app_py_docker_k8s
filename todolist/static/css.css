@@ -1,85 +1,96 @@
+/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to left, #d000ff, #00e1ff);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
+    font-family: Arial, sans-serif; /* Use Arial or sans-serif font */
+    background: linear-gradient(to left, #d000ff, #00e1ff); /* Background gradient */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
 }
+
+/* Heading styles */
 h1 {
-    text-align: center;
-    font-size: 32px;
-    color: rgb(0, 21, 255);
+    text-align: center; /* Center align heading */
+    font-size: 32px; /* Set font size */
+    color: rgb(0, 21, 255); /* Set text color */
 }
 
+/* Hello class styles */
 .hello {
-    text-align: center; 
-    margin-bottom: 20px; 
-    width: 100%;
-    font-size: 33px;
-    color: white;
-    height: 300px;
-}
-.container-two{
-    display: flex;
-    width: 100%;
+    text-align: center; /* Center align text */
+    margin-bottom: 20px; /* Add margin at the bottom */
+    width: 100%; /* Set width to 100% */
+    font-size: 33px; /* Set font size */
+    color: white; /* Set text color */
+    height: 300px; /* Set height */
 }
 
+/* Container-two class styles */
+.container-two {
+    display: flex; /* Use flexbox layout */
+    width: 100%; /* Set width to 100% */
+}
+
+/* Column class styles */
 .column {
-    flex-grow: 1; 
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-    width: 40vh;
-  
+    flex-grow: 1; /* Allow column to grow */
+    background-color: #ffffff; /* Set background color */
+    border-radius: 5px; /* Add border radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    margin: 10px; /* Add margin */
+    padding: 10px; /* Add padding */
+    display: inline-block; /* Use inline-block display */
+    vertical-align: top; /* Align content to the top */
+    width: 40vh; /* Set width */
 }
 
+/* Heading within column styles */
 .column h2 {
-    text-align: center;
-    color: #2b2828;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000000;
-    font-size: 22px;
-    text-transform: capitalize;
+    text-align: center; /* Center align heading */
+    color: #2b2828; /* Set text color */
+    padding-bottom: 10px; /* Add padding at the bottom */
+    border-bottom: 1px solid #000000; /* Add bottom border */
+    font-size: 22px; /* Set font size */
+    text-transform: capitalize; /* Capitalize text */
 }
 
+/* Task class styles */
 .task {
-    padding: 30px;
-    border-bottom: 1px solid none;
+    padding: 30px; /* Add padding */
+    border-bottom: 1px solid none; /* Add bottom border */
 }
 
+/* Heading within task styles */
 .task h3 {
-    margin-top: 0;
-    color: #ff5500;
-    font-size: 22px;
+    margin-top: 0; /* Remove top margin */
+    color: #ff5500; /* Set text color */
+    font-size: 22px; /* Set font size */
 }
 
+/* Paragraph within task styles */
 .task p {
-    margin-bottom: 0;
-    color: #262729;
-    font-size: 14px;
+    margin-bottom: 0; /* Remove bottom margin */
+    color: #262729; /* Set text color */
+    font-size: 14px; /* Set font size */
 }
 
+/* Button styles */
 button {
-    display: block;
-    margin: 10px auto;
-    padding: 8px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: #4706df;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-    width: 220px;
-    height: 50px;
+    display: block; /* Use block display */
+    margin: 10px auto; /* Center align button */
+    padding: 8px 15px; /* Add padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    background-color: #4706df; /* Set background color */
+    color: #fff; /* Set text color */
+    font-size: 20px; /* Set font size */
+    cursor: pointer; /* Set cursor to pointer */
+    width: 220px; /* Set width */
+    height: 50px; /* Set height */
 }
 
+/* Button hover styles */
 button:hover {
-    background-color: #5f85ad;
+    background-color: #5f85ad; /* Change background color on hover */
 }

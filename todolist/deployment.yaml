@@ -1,28 +1,38 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  # Name of the deployment
+  name: myapp
 spec:
+  # Number of desired replicas
   replicas: 3
+  # Selector for pods managed by this deployment
   selector:
     matchLabels:
-      app: {{ .Values.myapp }}
+       name: myapp
+  # Pod template
   template:
     metadata:
+      # Labels for the pods
       labels:
-        app: {{ .Values.myapp }}
+         name: myapp
     spec:
+      # Containers within the pod
       containers:
         - name: myapp-container
-          image: katarzynadasilva/myapp-k8s-py:dernier_version
+          # Docker image for the container
+          image: katarzynadasilva/myapp-k8s-py:v1
+          # Environment variables for the container
           env:
             - name: KATARZYNA
               valueFrom:
                 configMapKeyRef:
                   name: app-config
                   key: KATARZYNA
+          # Ports exposed by the container
           ports:
             - containerPort: 5001
+          # Resource limits for the container
           resources:
             limits:
               cpu: "0.5"  
