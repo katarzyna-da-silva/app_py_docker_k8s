@@ -2,14 +2,12 @@
 FROM python:3.10-slim
 
 # Ustawiamy katalog roboczy w kontenerze
-WORKDIR /app_py_docker_k8s/todolist
+WORKDIR /todolist
 
-# Skopiuj zawartość bieżącego katalogu do katalogu /app w kontenerze
-COPY . /app
+# Skopiuj zawartość bieżącego katalogu do katalogu /todolist w kontenerze
+COPY . /todolist
 
-COPY src/requirements.txt .
-
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /todolist/requirements.txt
 
 RUN apt-get update
 # Ustaw domyślną komendę do uruchomienia aplikacji Flask

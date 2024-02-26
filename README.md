@@ -29,3 +29,24 @@ This is a simple ToDo list web application built using Flask, Python, HTML, and 
     Build the Docker image: docker build -t todo-list-app .
     Run the Docker container: docker run -p 5000:5000 todo-list-app
     Access the application in your web browser at http://localhost:5000.
+
+
+*********************
+
+***DOCKER***
+
+Running the Application with Docker
+Building the Docker Image:
+
+***docker build -t myapp .***
+
+Replace myapp with the desired name for your image.
+Running the Docker Container:
+
+***docker run -it --rm -p 5001:5001 myapp***
+
+This command will run the container on port 5001 on your host. The -it option allows for interactive operation in the container, and --rm removes the container after it's stopped.
+
+Accessing the Application:
+
+Once the container is running, you can access the application at ***http://localhost:5001*** in your web browser.
