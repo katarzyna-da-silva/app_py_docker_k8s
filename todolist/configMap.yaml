@@ -1,8 +1,0 @@
-# Define a ConfigMap named "app-config"
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: app-config
-data:
-  # Define key-value pairs for the ConfigMap data
-  KATARZYNA: "HELLO Katarzyna!" # Set the value for the "KATARZYNA" key

@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app
+  namespace: argocd
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+    namespace: katarzyna
+  project: app_py
+  source:
+    repoURL: https://github.com/katarzyna-da-silva/app_py_docker_k8s.git
+    targetRevision: main
+    path: .
+  syncPolicy:
+    automated: {}
