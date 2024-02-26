@@ -24,12 +24,7 @@ This is a simple ToDo list web application built using Flask, Python, HTML, and 
 
 ***Usage***
 
-    Clone the repository.
-    Navigate to the project directory.
-    Build the Docker image: docker build -t todo-list-app .
-    Run the Docker container: docker run -p 5000:5000 todo-list-app
-    Access the application in your web browser at http://localhost:5000.
-
+***python app.py***
 
 *********************
 
