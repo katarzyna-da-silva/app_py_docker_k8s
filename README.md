@@ -48,7 +48,7 @@ Accessing the Application:
 Once the container is running, you can access the application at ***http://localhost:5001*** in your web browser.
 
 ***DOCKER IMAGE :***
-***application in docker: docker pull katarzynadasilva/myapp-k8s-py:latest***
+```` ***application in docker: docker pull katarzynadasilva/myapp-k8s-py:latest*** ````
 
 ## ***Kubernetes & AWS***
 
@@ -66,7 +66,7 @@ Once the container is running, you can access the application at ***http://local
 2. Install and configure the `kubectl` CLI tool for managing Kubernetes clusters.
 3. Deploy your application to the Amazon EKS cluster using Kubernetes manifests with `kubectl apply -f <manifests_directory>`.
 
-```
+````
 kubectl create namespace <namespace_name>
 kubectl get all -n <namespace_name>
 kubectl delete pod <pod_name> -n <namespace_name>
@@ -74,4 +74,5 @@ kubectl describe pod <pod_name> -n <namespace_name>
 kubectl get pods -n <namespace_name>
 kubectl rollout restart deployment <deployment_name> -n <namespace_name>
 kubectl logs <pod_name> -n <namespace_name>
-```
+
+````
