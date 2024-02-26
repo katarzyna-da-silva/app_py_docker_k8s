@@ -50,9 +50,9 @@ Once the container is running, you can access the application at ***http://local
 ***DOCKER IMAGE :***
 ***application in docker: docker pull katarzynadasilva/myapp-k8s-py:latest***
 
-### ***Kubernetes & AWS***
+## ***Kubernetes & AWS***
 
-## Deployment on AWS
+### Deployment on AWS
 
 ### Elastic Beanstalk
 
