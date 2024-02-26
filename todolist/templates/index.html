@@ -8,18 +8,17 @@
 </head>
 <body>
     <div class="container">
+        <h1>{{ user_name }}</h1>
+        <div class="hello"></div>
         <form action="{{ url_for('add_task_form') }}" method="get">
-            <div class="hello">
-                <h1>BONJOUR</h1> 
-           
         </form>
-        <!-- Przycisk "Dodaj nowe zadanie" -->
+       
         <form action="{{ url_for('add_task_form') }}" method="get">
             <button type="submit">ADD A NEW TASK</button>
         </form>
     </div>
     <div class="container-two">
-        <!-- Kolumna "Do Zrobienia" -->
+       
         <div class="column">
             <h2>to do : </h2>
             <div id="todo-tasks">
@@ -38,7 +37,6 @@
             </div>
         </div>
 
-        <!-- Kolumna "W Trakcie" -->
         <div class="column">
             <h2>in progress : </h2>
             <div id="in-progress-tasks">
@@ -57,7 +55,6 @@
             </div>
         </div>
 
-        <!-- Kolumna "Zrobione" -->
         <div class="column">
             <h2>done : </h2>
             <div id="done-tasks">

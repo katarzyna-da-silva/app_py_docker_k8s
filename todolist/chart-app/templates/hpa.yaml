@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "todolist-chart.fullname" . }}
+  name: {{ include "chart_app.fullname" . }}
   labels:
-    {{- include "todolist-chart.labels" . | nindent 4 }}
+    {{- include "chart_app.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "todolist-chart.fullname" . }}
+    name: {{ include "chart_app.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

@@ -3,14 +3,11 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)  # Konfiguracja CORS
-
-# Lista zadań - przykładowa implementacja, w praktyce dane przechowywane byłyby np. w bazie danych
+CORS(app)  
 tasks = {'todo': [], 'in-progress': [], 'done': []}
 
-# Pobranie imienia z zmiennej środowiskowej lub ustawienie domyślnego imienia
-user_name = os.getenv('VOTREPRENOM', 'Anonymous')
-
+user_name = os.getenv('KATARZYNA')
+print(user_name)
 @app.route('/')
 def index():
     return render_template('index.html', user_name=user_name, tasks=tasks)
@@ -25,8 +22,7 @@ def add_task_logic():
         task_name = request.form['task_name']
         task_content = request.form['task_content']
         task_category = request.form['task_category']
-        
-        # Dodawanie zadania do odpowiedniej kategorii
+
         tasks[task_category].append({'name': task_name, 'content': task_content})
         print(tasks)
         return redirect(url_for('index'))
@@ -34,7 +30,7 @@ def add_task_logic():
 
 @app.route('/mark_task_in_progress/<task_name>', methods=['POST'])
 def mark_task_in_progress(task_name):
-    # Znajdź zadanie o podanej nazwie w liście zadań "todo" i przenieś je do listy "in-progress"
+
     for idx, task in enumerate(tasks['todo']):
         if task['name'] == task_name:
             tasks['in-progress'].append(tasks['todo'].pop(idx))
@@ -43,7 +39,7 @@ def mark_task_in_progress(task_name):
 
 @app.route('/mark_task_done/<task_name>', methods=['POST'])
 def mark_task_done(task_name):
-    # Znajdź zadanie o podanej nazwie w liście zadań "in-progress" i przenieś je do listy "done"
+
     for idx, task in enumerate(tasks['in-progress']):
         if task['name'] == task_name:
             tasks['done'].append(tasks['in-progress'].pop(idx))
@@ -52,7 +48,7 @@ def mark_task_done(task_name):
 
 @app.route('/remove_task/<task_name>', methods=['POST'])
 def remove_task(task_name):
-    # Usuń zadanie o podanej nazwie z dowolnej listy zadań, w której się znajduje
+
     for column in tasks:
         for idx, task in enumerate(tasks[column]):
             if task['name'] == task_name:
