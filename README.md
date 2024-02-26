@@ -2,18 +2,18 @@
 The application consists of HTML, CSS, and utilizes Python, Flask, Kubernetes, and Docker image + flask and chart.
 
 
-##***ToDo List Web Application***
+***ToDo List Web Application***
 
 This is a simple ToDo list web application built using Flask, Python, HTML, and CSS. The application allows users to add, mark as in progress, mark as done, and remove tasks. It also utilizes Kubernetes for container orchestration and Docker for containerization.
 
-##***Features***
+## ***Features***
 
     Add tasks with names, descriptions, and categories.
     Mark tasks as in progress and done.
     Remove tasks from the list.
     View tasks organized by categories: to do, in progress, and done.
 
-##***Technologies Used***
+## ***Technologies Used***
 
     Python
     Flask
@@ -23,13 +23,13 @@ This is a simple ToDo list web application built using Flask, Python, HTML, and 
     Docker
     AWS
 
-###***Usage***
+### ***Usage***
 
-##***python app.py***
+## ***python app.py***
 
 *********************
 
-##***DOCKER***
+## ***DOCKER***
 
 Running the Application with Docker
 Building the Docker Image:
