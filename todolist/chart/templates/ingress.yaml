@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+spec:
+  rules:
+  - host: myapp.example.com  # Hostname for accessing the application
+    http:
+      paths:
+      - path: /              # Path for the main application
+        pathType: Prefix     # Type of path matching
+        backend:
+          service:
+            name: myapp-service  # Name of the Kubernetes service handling the traffic
+            port:
+              number: 80         # Port number on which the service is exposed
+      - path: /add           # Path for adding a new entry
+        pathType: Prefix     # Type of path matching
+        backend:
+          service:
+            name: myapp-service  # Name of the Kubernetes service handling the traffic
+            port:
+              number: 80         # Port number on which the service is exposed
